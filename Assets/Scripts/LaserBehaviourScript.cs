@@ -22,4 +22,11 @@ public class LaserBehaviourScript : MonoBehaviour
             Destroy(gameObject);
         }  
     }
+
+    void OnTriggerEnter2D(Collider2D collider){
+        if(collider.tag == "Balloon"){
+            Destroy(gameObject);
+            Destroy(collider.gameObject);
+        }
+    }
 }
