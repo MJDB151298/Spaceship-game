@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6735202497187652621}
   - component: {fileID: 7011355872706601257}
-  - component: {fileID: -5522062921259270139}
   - component: {fileID: 7732375955167821205}
   - component: {fileID: 7838670720448990647}
+  - component: {fileID: 2328806081689419371}
   m_Layer: 0
   m_Name: soap laser
   m_TagString: Untagged
@@ -84,18 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-5522062921259270139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6545569328799390446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14e6d623b187b5e4e82a6347e52f7de6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &7732375955167821205
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -143,3 +131,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2328806081689419371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6545569328799390446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14e6d623b187b5e4e82a6347e52f7de6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootButton: {fileID: 2417199274850835619, guid: 84f21e5067cbe8f49b4737b117b6c4a4,
+    type: 3}

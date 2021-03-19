@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Balloon
+  - Destroyer
   layers:
   - Default
   - TransparentFX
@@ -50,4 +51,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 3219519185
+    locked: 0
+  - name: Menu
+    uniqueID: 3542260977
     locked: 0

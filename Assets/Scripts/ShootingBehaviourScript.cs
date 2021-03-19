@@ -6,12 +6,13 @@ public class ShootingBehaviourScript : MonoBehaviour
 {
     public GameObject ship;
     public GameObject laserPrefab;
+    public int laserCount;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        laserCount = 0;
     }
 
     // Update is called once per frame
@@ -21,8 +22,12 @@ public class ShootingBehaviourScript : MonoBehaviour
     }
 
     void OnMouseDown(){
-        Vector3 shipPosition = ship.GetComponent<Transform>().position;
-        Debug.Log(shipPosition);
-        Instantiate(laserPrefab, shipPosition, Quaternion.identity);
+        if(ship != null && laserCount < 3)
+        {
+            Vector3 shipPosition = ship.GetComponent<Transform>().position;
+            Debug.Log(shipPosition);
+            Instantiate(laserPrefab, shipPosition, Quaternion.identity);
+            laserCount++;
+        }
     }
 }

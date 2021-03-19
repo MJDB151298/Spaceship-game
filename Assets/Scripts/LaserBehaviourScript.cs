@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LaserBehaviourScript : MonoBehaviour
 {
-
+    public GameObject shootButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +20,7 @@ public class LaserBehaviourScript : MonoBehaviour
         if(gameObject.GetComponent<Transform>().position.x < -14){
             Debug.Log(gameObject.name);
             Destroy(gameObject);
+            DecreaceLaserCount();
         }  
     }
 
@@ -27,6 +28,13 @@ public class LaserBehaviourScript : MonoBehaviour
         if(collider.tag == "Balloon"){
             Destroy(gameObject);
             Destroy(collider.gameObject);
+            DecreaceLaserCount();
         }
+    }
+
+    void DecreaceLaserCount()
+    {
+        GameObject shootButton = GameObject.Find("shoot-button");
+        shootButton.GetComponent<ShootingBehaviourScript>().laserCount -= 1;
     }
 }

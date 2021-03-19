@@ -5,6 +5,8 @@ using UnityEngine;
 public class SpaceshipBehaviourScript : MonoBehaviour
 {
     public GameObject soapLaser;
+    public GameObject balloonSpawner;
+    public GameObject gameOverCanvas;
 
     // Start is called before the first frame update
     void Start()
@@ -17,4 +19,15 @@ public class SpaceshipBehaviourScript : MonoBehaviour
     {
 
     }
+
+    void OnTriggerEnter2D(Collider2D trg)
+    {
+        if(trg.gameObject.tag == "Destroyer")
+        {
+            Destroy(gameObject);
+            Destroy(balloonSpawner.GetComponent<BalloonSpawnerBehaviourScript>());
+            gameOverCanvas.SetActive(true);
+        }
+    }
+
 }
