@@ -5,6 +5,7 @@ using UnityEngine;
 public class LaserBehaviourScript : MonoBehaviour
 {
     public GameObject shootButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,7 @@ public class LaserBehaviourScript : MonoBehaviour
             Destroy(gameObject);
             Destroy(collider.gameObject);
             DecreaceLaserCount();
+            GameObject.Find("Score").GetComponent<ScoreBehaviourScript>().UpdateScore(1);
         }
     }
 
