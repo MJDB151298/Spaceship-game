@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuOptionsScript : MonoBehaviour
 {
+    public GameObject scoreText;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +22,8 @@ public class MenuOptionsScript : MonoBehaviour
     public void RetryClicked()
     {
         SceneManager.LoadScene("SampleScene");
+
+        //Reiniciando la puntuacion
+        scoreText.GetComponent<ScoreBehaviourScript>().ResetScore();
     }
 }
