@@ -797,6 +797,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b266994db52fe418b4d27a919fd0d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverCanvas: {fileID: 616480456}
+  ship: {fileID: 1699831809}
+  balloonSpawner: {fileID: 1879395812}
+  gameOverText: {fileID: 1779836840}
+  gameOverButton: {fileID: 1690732884}
 --- !u!1 &1064491467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,6 +1442,8 @@ MonoBehaviour:
     type: 3}
   balloonSpawner: {fileID: 1879395812}
   gameOverCanvas: {fileID: 616480456}
+  gameOverText: {fileID: 1779836840}
+  gameOverButton: {fileID: 1690732884}
 --- !u!114 &1699831811
 MonoBehaviour:
   m_ObjectHideFlags: 0
