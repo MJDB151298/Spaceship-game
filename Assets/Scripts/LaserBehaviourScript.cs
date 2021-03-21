@@ -30,7 +30,7 @@ public class LaserBehaviourScript : MonoBehaviour
             Destroy(gameObject);
             Destroy(collider.gameObject);
             DecreaceLaserCount();
-            GameObject.Find("Score").GetComponent<ScoreBehaviourScript>().UpdateScore(1);
+            GameObject.Find("Score").GetComponent<ScoreBehaviourScript>().UpdateScore(100);
         }
     }
 
