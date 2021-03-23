@@ -30,8 +30,15 @@ public class LaserBehaviourScript : MonoBehaviour
             Destroy(gameObject);
             Destroy(collider.gameObject);
             DecreaceLaserCount();
-            GameObject.Find("Score").GetComponent<ScoreBehaviourScript>().UpdateScore(100);
-            GameObject.Find("New SpriteShapeController (1)").GetComponent<SpaceshipBehaviourScript>().IncreaseHealth(1);
+            if(collider.gameObject.name == "red balloon(Clone)"){
+                GameObject.Find("Score").GetComponent<ScoreBehaviourScript>().UpdateScore(5);
+                GameObject.Find("New SpriteShapeController (1)").GetComponent<SpaceshipBehaviourScript>().IncreaseHealth(1);
+            }
+            else{
+                GameObject.Find("Score").GetComponent<ScoreBehaviourScript>().UpdateScore(20);
+                GameObject.Find("New SpriteShapeController (1)").GetComponent<SpaceshipBehaviourScript>().IncreaseHealth(5);
+            }
+            
         }
     }
 

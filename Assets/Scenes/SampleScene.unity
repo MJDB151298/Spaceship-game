@@ -356,7 +356,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.677813
+  orthographic size: 5.693362
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -815,7 +815,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -399, y: 150.7}
+  m_AnchoredPosition: {x: -359, y: 132}
   m_SizeDelta: {x: 187.32452, y: 36.306976}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &690140191
@@ -913,7 +913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 186, y: 172}
+  m_AnchoredPosition: {x: 124, y: 143}
   m_SizeDelta: {x: 333.2356, y: 34.50702}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1006887267
@@ -2266,7 +2266,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a13f0bd48fd2fb41a30aa64a54e39d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balloon: {fileID: 3314150308907058689, guid: 53e3a76124f7404449b815d74ee4ac60, type: 3}
+  redBalloon: {fileID: 3832678540474621306, guid: eb9bbef4839266d49be34aefd79ced3b,
+    type: 3}
+  blueBalloon: {fileID: 2884921931351683577, guid: 27e84c1c52e0f0e41837aeee481a8505,
+    type: 3}
 --- !u!4 &1879395814
 Transform:
   m_ObjectHideFlags: 0

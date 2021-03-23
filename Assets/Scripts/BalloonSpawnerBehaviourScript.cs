@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BalloonSpawnerBehaviourScript : MonoBehaviour
 {
-    public GameObject balloon;
+    public GameObject redBalloon;
+    public GameObject blueBalloon;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,11 @@ public class BalloonSpawnerBehaviourScript : MonoBehaviour
     void SpawnBalloon(){
         Vector3 spawner = gameObject.transform.GetChild(Random.Range(0,5)).transform.position;
         //Vector3 spawnerPosition = spawner.transform.position;
-        Instantiate(balloon, spawner, Quaternion.identity);
+        int balloonLotto = Random.Range(1,11);
+        if(balloonLotto == 4 || balloonLotto == 6){
+            Instantiate(blueBalloon, spawner, Quaternion.identity);   
+        }else{
+            Instantiate(redBalloon, spawner, Quaternion.identity);
+        }
     }
 }
