@@ -31,6 +31,7 @@ public class LaserBehaviourScript : MonoBehaviour
             Destroy(collider.gameObject);
             DecreaceLaserCount();
             GameObject.Find("Score").GetComponent<ScoreBehaviourScript>().UpdateScore(100);
+            GameObject.Find("New SpriteShapeController (1)").GetComponent<SpaceshipBehaviourScript>().IncreaseHealth(1);
         }
     }
 
