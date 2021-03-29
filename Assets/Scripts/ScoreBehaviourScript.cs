@@ -28,7 +28,7 @@ public class ScoreBehaviourScript : MonoBehaviour
     public void UpdateScore(int points){
         this.score += points;
         gameObject.GetComponent<Text>().text = this.score.ToString().PadLeft(3, '0');
-        if(score == 500){
+        if(score >= 500){
             Destroy(ship);
             Destroy(balloonSpawner.GetComponent<BalloonSpawnerBehaviourScript>());
             gameOverText.text = "GOOD WORK!";

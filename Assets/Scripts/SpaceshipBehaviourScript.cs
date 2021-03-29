@@ -14,6 +14,7 @@ public class SpaceshipBehaviourScript : MonoBehaviour
     public int maxHealth;
     public int currentHealth;
     public HealthScript healthBar;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class SpaceshipBehaviourScript : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         StartCoroutine(TenSecondsDamage());
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -64,13 +66,16 @@ public class SpaceshipBehaviourScript : MonoBehaviour
 
     public void gotGameOver()
     {
+        Destroy(GameObject.Find("UpButton").GetComponent<MoveShip>());
+        animator.SetTrigger("Death");
         healthBar.SetHealth(0);
-        Destroy(gameObject);
         Destroy(balloonSpawner.GetComponent<BalloonSpawnerBehaviourScript>());
-
+        Destroy(gameObject.GetComponent<SpaceshipBehaviourScript>());
         gameOverText.text = "GAME OVER";
         gameOverButton.text = "RETRY";
         gameOverCanvas.SetActive(true);
     }
+
+
 
 }
